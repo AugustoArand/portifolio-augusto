@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Links Diretos - Projetos | Augusto Arand</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            background-color: #f3f4f6;
+            color: #23272b;
+        }
+
+        .navbar {
+            background: #343a40 !important;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 1.5rem;
+            color: #dee2e6 !important;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #6c757d;
+            box-shadow: 0 0 0 4px #fff, 0 2px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1rem;
+        }
+
+        .intro-section {
+            background: linear-gradient(120deg, #6c757d 60%, #adb5bd 100%);
+            color: #fff;
+            border-radius: 1rem;
+            padding: 2rem 1rem 2rem 1rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 24px rgba(52, 58, 64, 0.07);
+            text-align: center;
+        }
+
+        .card {
+            border: none;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            transition: transform 0.15s, box-shadow 0.15s;
+            background-color: #fff;
+        }
+
+        .card:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 8px 32px rgba(108, 117, 125, 0.13);
+        }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #495057;
+        }
+
+        .btn-outline-primary {
+            border-radius: 2rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            font-weight: 500;
+            border-color: #6c757d;
+            color: #6c757d;
+            background: transparent;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+        }
+
+        .btn-outline-primary:hover,
+        .btn-outline-primary:focus {
+            background: #6c757d;
+            color: #fff;
+            border-color: #6c757d;
+        }
+
+        .project-author {
+            font-size: 0.98rem;
+        }
+
+        .back-btn {
+            border-radius: 2rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            background: #dee2e6;
+            color: #343a40;
+            border: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .back-btn:hover,
+        .back-btn:focus {
+            background: #6c757d;
+            color: #fff;
+        }
+
+        .footer-gray {
+            background: #343a40;
+            color: #dee2e6;
+        }
+
+        @media (max-width: 768px) {
+            .intro-section {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg shadow-sm mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">Links Diretos - Projetos</a>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+
+        <!-- Botão de Voltar -->
+        <div>
+            <button class="btn back-btn shadow-sm" href="index.html" onclick="history.back()">
+                &larr; Voltar
+            </button>
+        </div>
+
+        <!-- Intro/Profile Section -->
+        <section class="intro-section mb-4">
+            <img src="assets/img/photo01.jpeg" alt="Augusto Arand" class="profile-img">
+            <h1 class="mb-1">Augusto Santos</h1>
+            <p class="lead mb-2">Graduando em Análise e Desenvolvimento de Sistemas</p>
+            <p class="mb-0">Confira abaixo os respectivos links para cada projeto realizado.</p>
+        </section>
+
+        <!-- Projetos -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- Card do Projeto 1 -->
+            <div class="col-md-6">
+                <article class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title mb-2">Pig Game</h2>
+                        <h6 class="text-muted mb-3 project-author">por <span class="fw-bold">Augusto Arand</span></h6>
+                        <p class="card-text flex-grow-1">
+                            Um mini game desenvolvido em JavaScript, HTML e CSS. O objetivo do jogo é acumular pontos,
+                            evitando tirar o número 1 no dado.
+                        </p>
+                        <a href="https://github.com/AugustoArand/pig-game"
+                            class="btn btn-outline-primary mt-2 align-self-start" target="_blank" rel="noopener">Ver
+                            Projeto</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Card do Projeto 2 -->
+            <div class="col-md-6">
+                <article class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title mb-2">Guess My Number</h2>
+                        <h6 class="text-muted mb-3 project-author">por <span class="fw-bold">Augusto Arand</span></h6>
+                        <p class="card-text flex-grow-1">
+                            Um mini game desenvolvido em JavaScript, HTML e CSS. O objetivo do jogo é adivinhar o
+                            número.
+                        </p>
+                        <a href="https://augustoarand.github.io/guess-my-number/"
+                            class="btn btn-outline-primary mt-2 align-self-start" target="_blank" rel="noopener">Ver
+                            Projeto</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Card do Projeto 3 -->
+            <div class="col-md-6">
+                <article class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title mb-2">Simulador de Banco</h2>
+                        <h6 class="text-muted mb-3 project-author">por <span class="fw-bold">Augusto Arand</span></h6>
+                        <p class="card-text flex-grow-1">
+                            Projeto desenvolvido em JavaScript, HTML e CSS. Simula um banco onde é possível realizar
+                            operações como depósito, saque e consulta de saldo.
+                            Conta 01 - Usuário: js | Senha:1111 <br>
+                            Conta 02 - Usuário: jd | Senha:2222 <br>
+                            Conta 03 - Usuário: stw | Senha:3333
+                        </p>
+                        <a href="https://augustoarand.github.io/Bank-App/"
+                            class="btn btn-outline-primary mt-2 align-self-start" target="_blank" rel="noopener">Ver
+                            Projeto</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Card do Projeto 4 -->
+            <div class="col-md-6">
+                <article class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title mb-2">Gerenciador de Atividades Físicas</h2>
+                        <h6 class="text-muted mb-3 project-author">por <span class="fw-bold">Augusto Arand</span></h6>
+                        <p class="card-text flex-grow-1">
+                            Projeto desenvolvido em JavaScript, HTML, CSS e Node.js. Permite registrar atividades
+                            físicas,
+                            visualizar estatísticas e gerenciar um histórico de treinos. Projeto realizado com a
+                            biblioteca Leaflet
+                            para visualização de mapas e geolocalização.
+                        </p>
+                        <a href="https://augustoarand.github.io/mapty-exercise/"
+                            class="btn btn-outline-primary mt-2 align-self-start" target="_blank" rel="noopener">Ver
+                            Projeto</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Card do Projeto 5 -->
+            <div class="col-md-6">
+                <article class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title mb-2">Gerador de QR Code</h2>
+                        <h6 class="text-muted mb-3 project-author">por <span class="fw-bold">Augusto Arand</span></h6>
+                        <p class="card-text flex-grow-1">
+                            Projeto desenvolvido em JavaScript, HTML, CSS, Node.js. Permite gerar QR Codes
+                            personalizados e senhas aleatórias diretamente no prompt.
+                        </p>
+                        <a href="https://augustoarand.github.io" class="btn btn-outline-primary mt-2 align-self-start"
+                            target="_blank" rel="noopener">Ver Projeto</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6">
+                <article class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title mb-2">Página de Divulgação - Front End</h2>
+                        <h6 class="text-muted mb-3 project-author">por <span class="fw-bold">Augusto Arand</span>
+                        </h6>
+                        <p class="card-text flex-grow-1">
+                            Projeto desenvolvido em Bootstrap, HTML, CSS. Uma página de divulgação para um
+                            evento fictício, utilizando componentes do Bootstrap para layout responsivo e
+                            estilização.
+                        </p>
+                        <a href="https://augustoarand.github.io/project-riot-games-convention/"
+                            class="btn btn-outline-primary mt-2 align-self-start" target="_blank" rel="noopener">Ver
+                            Projeto</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- <article class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title mb-2">Reprodução Interface - Spotify</h2>
+                        <h6 class="text-muted mb-3 project-author">por <span class="fw-bold">Augusto Arand</span></h6>
+                        <p class="card-text flex-grow-1">
+                            Projeto desenvolvido em JavaScript, HTML, CSS, Node.js. Permite gerar QR Codes
+                            personalizados e senhas aleatórias diretamente no prompt.
+                        </p>
+                        <a href="https://augustoarand.github.io" class="btn btn-outline-primary mt-2 align-self-start"
+                            target="_blank" rel="noopener">Ver Projeto</a>
+                    </div>
+                </article> -->
+        </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-gray text-center py-3 mt-5 rounded-top-3 shadow-sm">
+        <div class="container">
+            <small>&copy; 2025 Augusto Arand. Todos os direitos reservados.</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (opcional, para componentes interativos) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

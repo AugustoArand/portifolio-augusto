@@ -1,167 +1,390 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS (use only one version!) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title> Augusto CV </title>
+    <title>Portifolio | Curriculo</title>
+
+    <style>
+        /* Responsividade da imagem do card principal */
+        .card-img-top {
+            object-fit: cover;
+        }
+
+        /* Remove larguras fixas dos cards */
+        .card[style] {
+            width: 100% !important;
+            height: auto !important;
+            margin-left: 0 !important;
+        }
+
+        /* Espaço extra abaixo do navbar fixo */
+        body {
+            padding-top: 20px;
+        }
+
+        /* Corrige overflow de carousel em mobile */
+        .carousel-inner img {
+            max-height: 350px;
+            object-fit: cover;
+        }
+
+        /* Ajusta recuo do footer para não colar no conteúdo */
+        footer {
+            margin-top: 3rem;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="#"> Augusto Portifolio</a>
-            </div> <!-- logo -->
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="#"> About Me </a></li>
-                    <li><a href="#"> Skills </a></li>
-                    <li><a href="#"> Projects </a></li>
-                </ul>
-            </nav>
-            <div class="btn-contato">
-                <a href="#">
-                    <button> Contact Me </button>
-                </a>
+
+<body class="font-monospace">
+
+    <!-- Inicio Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo-as-miniatura.svg" width="30" height="30" alt="">
+        </a>
+        <a class="navbar-brand" href="#">Portifolio | Curriculo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#sobre-mim">Sobre Mim <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projetos">Projetos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mais
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#stacks-conhecidas">Stacks Conhecidas</a>
+                        <a class="dropdown-item" href="blog.html">Links Projetos</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- <form class="d-flex my-2 my-lg-0" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Busque</button>
+            </form> -->
+        </div>
+    </nav>
+    <!-- Fim da Barra de Navegação -->
+
+    <!-- Card Sobre Mim -->
+    <div class="container mt-5" id="sobre-mim">
+        <div class="row justify-content-center p-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-2">
+                <!-- Card da Esquerda -->
+                <div class="card h-100">
+                    <img class="card-img-top" src="/assets/img/photo01.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Augusto Santos</h5>
+                        <p class="card-text">Estudante de Análise e Desenvolvimento de Sistemas</p>
+                        <a href="https://www.linkedin.com/in/augusto-arandiba-b26b90105/"
+                            class="badge bg-primary text-light text-decoration-none">Linkedin</a>
+                        <a href="https://github.com/AugustoArand"
+                            class="badge bg-dark text-light text-decoration-none">GitHub</a>
+                    </div>
+                </div>
             </div>
-        </div> <!-- interface -->
-    </header>
+            <div class="col-12 col-md-6 col-lg-8 mb-2">
+                <!-- Card da Direita (Sobre Mim) -->
+                <div class="card h-80 mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sobre Mim</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Resumo Profissional</h6>
+                        <p class="card-text">Apaixonado por motos e tecnologia, atualmente cursando Análise e
+                            Desenvolvimento de Sistemas no Centro Universitário Jorge Amado. Possuo experiência
+                            prévia como Quality Assurance, realizando testes manuais e automatizados em dispositivos
+                            mobile, smoke tests, testes funcionais e não funcionais. Possuo também uma breve
+                            experiência na criação de planos e casos de testes, criação e manutenção de scripts,
+                            testes de integração e API. Possuo um conhecimento sólido na gestão de ambientes de
+                            teste para replicar cenários reais da produção, e levantamento e refinamento de
+                            requisitos e especificações. </p>
+                        <a href="#" class="card-link"> ☛ Stack Conhecidas </a>
+                    </div>
+                </div>
+                <div class="card h-80 mb-0.8">
+                    <div class="card-body">
+                        <h5 class="card-title">Objetivo Profissional </h5>
+                        <p class="card-text"> Busco me tornar um desenvolvedor Back End no futuro, e até
+                            alcançar este objetivo, estarei desenvolvendo minhas habilidades através da área de
+                            qualidade, aprendendo conceitos como: Levantamento de Requisitos, Arquitetura em
+                            Nuvem, Ferramentas de Automação, Ferramentas de Teste de Integração e APIs </p>
+                        <a href="#" class="card-link"> ☛ Projetos </a>
+                    </div>
+                    <!-- Card da Direita (Objetivo Profissional) -->
+                </div>
+            </div>
+        </div>
+        <!-- Fim Card Sobre Mim -->
 
-    <main>
-        <section class="topo-do-site">
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-topo-site">
-                        <h1> Augusto Santos Systems Analysis and Development Student <span> . </span> </h1>
-                        <p> Automation Tools as Cypress, RobotFramework | Node.js | Express | Postman | MongoDB </p>
-
-                        <div class="btn-contato">
-                            <a href="#">
-                                <button> Contact Me </button>
-                            </a>
+        <!-- Inicio Carrousel Projeto -->
+        <div class="container my-1" id="projetos">
+            <h2 class="text-center mb-3">Projetos</h2>
+            <div class="col-12 col-md-8 mb-3 mx-auto">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                            aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/pig-game.PNG" class="d-block w-100 project-img" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="fw-bold text-dark">Projeto - Pig Game</h5>
+                                <p class="text-dark">Um mini game desenvolvido em através de JS, HTML e CSS</p>
+                            </div>
                         </div>
-                    </div> <!-- txt-topo-site -->
-                    <div class="img-topo-site">
-                        <img src="img/photo01.jpeg" alt="">
-                    </div> <!-- img topo site -->
+                        <div class="carousel-item">
+                            <img src="./assets/img/guess-my-number.PNG" class="d-block w-100 project-img" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="fw-bold text-dark">Projeto - Adivinhe meu número </h5>
+                                <p class="text-dark">Um mini game desenvolvido em através de JS, HTML e CSS.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/bank-app-new.PNG" class="d-block w-100 project-img" alt="...">
+                            <div class="carousel-caption d-none d-md-block fw-bold">
+                                <h5 class="fw-bold text-dark">Simulador de Conta Bancária</h5>
+                                <p class="text-dark">Desenvolvido em JS | CSS e HTML </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/mapty.PNG" class="d-block w-100 project-img" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="fw-bold text-dark">Gerenciador de Atividades Físicas</h5>
+                                <p class="text-dark">Desenvolvido em JS | CSS | HTML | Leatflet.js </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/qr-code.PNG" class="d-block w-100 project-img" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="fw-bold text-dark">Gerador de QR Code e Senhas</h5>
+                                <p class="text-dark">Desenvolvido em Node.js | Geração Direto no Prompt </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/riot-games-convention.PNG" class="d-block w-100 project-img"
+                                alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="fw-bold text-dark">Página Divulgação - Evento</h5>
+                                <p class="text-dark">Front end Desenvolvido em Bootstrap</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true""></span>
+                        <span class=" visually-hidden">Next</span>
+                    </button>
+
+                    <!-- Estilo para deixar os ícones do carrossel brancos -->
+                    <style>
+                        .carousel-control-prev-icon,
+                        .carousel-control-next-icon {
+                            filter: invert(1);
+                        }
+                    </style>
                 </div>
-            </div> <!-- interface -->
-        </section> <!-- topo do site -->
+            </div>
+        </div>
+        <!-- Fim Carrousel Projeto -->
 
-        <section class="especialidades">
-            <div class="interface">
-                <h2 class="titulo"> My <span>Skills.</span></h2>
-                <div class="flex">
-                    <div class="especialidades-box">
-                        <i class="bi bi-code-square"></i>
-                        <h3> Back End </h3>
-                        <p> RestAPIs, Node.js, Web Apps, Express.js, MVC Model, MongoDB, MySQL, JavaScript </p>
+        <!-- Inicio de Stacks Conhecidas -->
+        <div class="container my-5" id="stacks-conhecidas">
+            <h2 class="text-center mb-4">Stacks Conhecidas</h2>
+            <!-- g-4 garante espaçamento vertical e horizontal entre as colunas/linhas -->
+            <div class="row g-4 mt-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <img src="./assets/img/JS.jpg" class="card-img-top stack-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript | HTML | CSS</h5>
+                            <p class="card-text"> Desenvolvimento de aplicações front e back end </p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        </div>
                     </div>
-
-                    <div class="especialidades-box">
-                        <i class="bi bi-front"></i>
-                        <h3> Automation Tools </h3>
-                        <p> Front and Back End Automation with Cypress and RobotFramework </p>
-                    </div>
-
-                    <div class="especialidades-box">
-                        <i class="bi bi-file-post-fill"></i>
-                        <h3> QA | DevOps</h3>
-                        <p> Experience in functional and non functional testing, Mantis Bug Tracker. Brief experience in JIRA (Zephyr) and Azure </p
-                    </div> <!-- especialidades box-->
-                    
-                </div> <!-- flex -->
-            </div> <!-- interface -->
-
-        </section> <!-- Especialidades -->
-
-        <section class="sobre">
-            <div class="interface">
-                <div class="flex">
-                    <div class="img-sobre">
-                        <img src="img/phoo03jpg.jpg" alt="">
-                    </div> <!-- img sobre -->
-
-                    <div class="txt-sobre">
-                        <h2>Hello <span>World.</span>
-                                I'm Augusto Santos</h2>
-                    <p>Formed Mechanical Engineer, passionate by technology, motorcyle and proud to be part of a motorcycle club (W.F.F.W).</p>
-                    <p> I'm studying Systems Analysis and Development at Unijorge University at the moment . I have previous experience as mobile Quality Assurance, more specifically in functional and non funciotnal testing. Brief experience in creation of planning and test cases, maintenance and creation of scripts using Cypress and Robot Framework, integration and API testing using Postman.</p>
-
-                    <div class="btn-social">
-                        <a href="https://www.linkedin.com/in/augusto-arandiba-b26b90105/"><button>
-                            <i class="bi bi-linkedin"></i>
-                        </button></a>
-                        <a href="https://github.com/AugustoArand"><button>
-                            <i class="bi bi-github"></i>
-                        </button></a>
-                        <a href="cv/AugustoCV_TI_EN.pdf"><button>
-                            <i class="bi bi-file-earmark-arrow-down"></i>
-                        </button></a>
-                    </div> <!--btn social -->
-                    
-                    </div><!--txt sobre -->
-
-                </div><!-- Flex -->
-
-            </div><!-- Interface -->
-
-
-        </section><!-- Sobre -->
-
-        <section class="portifolio">
-            <div class="interface">
-                <h2 class="titulo"> My <span>Projects</span> </h2>
-                <div class="flex">
-                    <div class="img-port" style="background-image: url(img/Capturar.PNG) ;">
-                        <div class="overlay"> Pig Game </div>
-                    </div>
-                    <div class="img-port" style="background-image: url(img/Capturar2.PNG) ;">
-                        <div class="overlay"> Guess My Number </div>
-                    </div>
-                    <div class="img-port" style="background-image: url(img/Capturar3.PNG) ;">
-                        <div class="overlay"> Bank App </div>
-                    </div>
-
-                    <div class="img-port" style="background-image: url(img/capturar5.PNG) ;">
-                        <div class="overlay"> QRCode Generator </div>
-                    </div>
-
-                    <div class="img-port" style="background-image: url(img/capturar4.PNG) ;">
-                        <div class="overlay"> Mapty - Physical Exercise </div>
-                    </div>
-                </div> <!-- flex -->
-
-            </div><!-- interface -->
-
-        </section><!-- portifolio -->
-    </main>
-
-    <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <i class="bi bi-envelope"></i>
-                    </div>
-                    <div class="btn-social">
-                        <a href="https://www.linkedin.com/in/augusto-arandiba-b26b90105/"><button>
-                            <i class="bi bi-linkedin"></i>
-                        </button></a>
-                        <a href="https://github.com/AugustoArand"><button>
-                            <i class="bi bi-github"></i>
-                        </button></a>
-                        
-                    </div> <!--btn social -->
                 </div>
-            </div><!-- line- footer 01 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <img src="./assets/img/node.png" class="card-img-top stack-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Node.js | Express.js</h5>
+                            <p class="card-text">Desenvolvimento de APIs e RestAPIs, aplicações web com arquitetura MVC.
+                            </p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <img src="./assets/img/mysql.png" class="card-img-top stack-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Banco de Dados SQL | MySQL</h5>
+                            <p class="card-text">Consulta e Gerenciamento de Banco de Dados Relacionais e Não
+                                Relacionais</p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <img src="./assets/img/excel+powerbi.png" class="card-img-top stack-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel | PowerBI</h5>
+                            <p class="card-text">Análise de dados e construção de dashboards interativos.</p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <img src="./assets/img/cypress.png" class="card-img-top stack-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cypress</h5>
+                            <p class="card-text">Automações Front e Back End, integração com Cypress Cloud e GitHub
+                                Actions</p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <img src="./assets/img/robot-framework.png" class="card-img-top stack-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Robot Framework</h5>
+                            <p class="card-text">Automações Front e Back End</p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <img src="./assets/img/jira.jpg" class="card-img-top stack-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Jira & Zephyr</h5>
+                            <p class="card-text">Gestão de projetos, criação de pipelines, gerenciamento e report de
+                                bugs</p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <img src="./assets/img/postman.png" class="card-img-top stack-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Postman</h5>
+                            <p class="card-text">Testes de APIs RESTful e automação de requisições.</p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <img src="./assets/img/jmeter.png" class="card-img-top stack-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Jmeter Apache</h5>
+                            <p class="card-text">Testes de carga e performance</p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <img src="./assets/img/scrumstudy.png" class="card-img-top stack-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Scrum Fundamentals | Gestão Ágil</h5>
+                            <p class="card-text">Conhecimento em metodologias ágeis de gestão de projetos, e base sólida
+                                referente ao CTFL Foundation (Não Certificado Ainda).</p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Final de Stacks Conhecidas -->
 
-            <div class="line-footer borda">
-                <p><i class="bi bi-envelope"></i> <a href="mailto:augustoarandiba@gmail.com"> augustoarandiba@gmail.com</a> </p>
-            </div><!-- line- footer 012-->
-        </div><!-- interface -->
-    </footer><!-- footer -->
-    
+        <!-- Formulário de Contato -->
+        <!-- <div class="container my-5">
+            <h2 class="text-center mb-4">Formulário de Contato</h2>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" placeholder="seu@email.com"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="assunto" class="form-label">Assunto</label>
+                                    <input type="text" class="form-control" id="assunto"
+                                        placeholder="Assunto da mensagem" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensagem" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="mensagem" rows="5"
+                                        placeholder="Digite sua mensagem aqui..." required></textarea>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Fim Formulário de Contato -->
+
+        <!-- Bootstrap JS (apenas v5.3, retire os scripts duplicados de outras versões e jQuery/Popper antigos!) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+        <p class="mb-1">&copy; 2025 Augusto Arand. Todos os direitos reservados.</p>
+        <p class="mb-0">
+            <a href="mailto:seuemail@email.com" class="text-light text-decoration-underline me-3">Contato</a>
+            <a href="https://www.linkedin.com/in/seulinkedin" target="_blank"
+                class="text-light text-decoration-underline me-3">LinkedIn</a>
+            <a href="https://github.com/AugustoArand" target="_blank"
+                class="text-light text-decoration-underline">GitHub</a>
+        </p>
+    </div>
+</footer>
+
 </html>
