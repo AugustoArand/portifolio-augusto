@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-unused-vars": ["warn"],
+    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+    "prefer-const": "error",
+    "no-var": "error",
+    "arrow-spacing": "error",
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
+    "comma-dangle": ["error", "never"],
+    "eol-last": ["error", "always"],
+    "max-len": ["warn", { "code": 100, "ignoreUrls": true }],
+    "no-trailing-spaces": "error"
+  },
+  "globals": {
+    "bootstrap": "readonly",
+    "IntersectionObserver": "readonly",
+    "performance": "readonly"
+  }
+}

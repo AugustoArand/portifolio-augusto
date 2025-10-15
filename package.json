@@ -1,9 +1,50 @@
 {
+  "name": "portfolio-augusto",
+  "version": "2.0.0",
+  "description": "Portfólio profissional modular de Augusto Santos",
+  "type": "module",
+  "main": "js/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview --port 3000",
+    "lint": "eslint js/ --ext .js",
+    "lint:fix": "eslint js/ --ext .js --fix",
+    "format": "prettier --write \"**/*.{js,css,html,md}\"",
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
+  },
+  "keywords": [
+    "portfolio", 
+    "javascript", 
+    "modular", 
+    "frontend", 
+    "vite"
+  ],
+  "author": "Augusto Santos",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "nodemailer": "^7.0.3"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.0",
+    "nodemon": "^3.0.0",
+    "@vitejs/plugin-legacy": "^4.1.0",
+    "terser": "^5.20.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
   }
 }

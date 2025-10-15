@@ -1,0 +1,400 @@
+/**
+ * Estilos de animações e efeitos visuais
+ */
+
+/* Animações base para scroll reveal */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Diferentes tipos de animação de entrada */
+.fade-in {
+  opacity: 0;
+  transition: opacity var(--animation-delay, 0ms) 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all var(--animation-delay, 0ms) 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all var(--animation-delay, 0ms) 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all var(--animation-delay, 0ms) 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-down {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all var(--animation-delay, 0ms) 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-down.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scale animations */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all var(--animation-delay, 0ms) 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Rotate animations */
+.rotate-in {
+  opacity: 0;
+  transform: rotate(-10deg) scale(0.8);
+  transition: all var(--animation-delay, 0ms) 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rotate-in.visible {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Loading animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid;
+  white-space: nowrap;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: currentColor;
+  }
+}
+
+/* Floating animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -15px, 0);
+  }
+  70% {
+    transform: translate3d(0, -7px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+.bounce {
+  animation: bounce 1s ease infinite;
+}
+
+/* Shake animation */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.6s ease-in-out;
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow:hover {
+  box-shadow: 0 0 30px rgba(0, 123, 255, 0.8);
+}
+
+/* Gradient animations */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-animation {
+  background: linear-gradient(-45deg, #007bff, #6f42c1, #e83e8c, #fd7e14);
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Parallax effect utilities */
+.parallax {
+  will-change: transform;
+}
+
+.parallax-slow {
+  transform: translateY(var(--parallax-offset, 0));
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image reveal on load */
+.image-reveal {
+  overflow: hidden;
+  position: relative;
+}
+
+.image-reveal img {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all 0.6s ease;
+}
+
+.image-reveal img.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-text {
+  height: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 4px;
+}
+
+.skeleton-text:last-child {
+  width: 60%;
+  margin-bottom: 0;
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 100ms; }
+.stagger-2 { animation-delay: 200ms; }
+.stagger-3 { animation-delay: 300ms; }
+.stagger-4 { animation-delay: 400ms; }
+.stagger-5 { animation-delay: 500ms; }
+.stagger-6 { animation-delay: 600ms; }
+
+/* Page transition */
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.page-transition.loaded {
+  opacity: 1;
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #6f42c1);
+  z-index: 9999;
+  transition: width 0.1s ease;
+}
+
+/* Focus animations for accessibility */
+.focus-ring {
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.focus-ring:focus {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* Motion safe preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-on-scroll,
+  .fade-in,
+  .slide-in-left,
+  .slide-in-right,
+  .slide-in-up,
+  .slide-in-down,
+  .scale-in,
+  .rotate-in {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .typewriter {
+    border-right: none;
+    animation: none;
+    white-space: normal;
+    width: auto;
+  }
+}
+
+/* Print styles - hide animations */
+@media print {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .animate-on-scroll,
+  .fade-in,
+  .slide-in-left,
+  .slide-in-right,
+  .slide-in-up,
+  .slide-in-down,
+  .scale-in,
+  .rotate-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  .glow {
+    box-shadow: 0 0 0 2px currentColor;
+  }
+  
+  .gradient-animation {
+    background: currentColor;
+    animation: none;
+  }
+  
+  .skeleton {
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 10px,
+      currentColor 10px,
+      currentColor 12px
+    );
+  }
+}
