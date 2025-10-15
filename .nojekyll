@@ -1,0 +1,15 @@
+# GitHub Pages Configuration
+# Este arquivo garante que o GitHub Pages funcione corretamente
+
+# Configurações para Single Page Application (SPA)
+# Se seu site usar roteamento client-side, descomente as linhas abaixo:
+
+# include:
+#   - _config.yml
+#   - .nojekyll
+
+# plugins:
+#   - jekyll-redirect-from
+
+# Para sites estáticos simples (como este portfólio), 
+# não é necessário configuração especial

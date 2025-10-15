@@ -79,39 +79,65 @@ Portfólio profissional completamente modularizado, seguindo as melhores prátic
 
 ## 🚀 Como Executar
 
-### Desenvolvimento
+### Desenvolvimento Local
 
 ```bash
-# Instalar dependências
+# Clonar o repositório
+git clone https://github.com/AugustoArand/portifolio-augusto.git
+cd portifolio-augusto
+
+# Instalar dependências (opcional - apenas se usar package.json)
 npm install
 
-# Servidor de desenvolvimento
+# Servidor de desenvolvimento (se usar Vite)
 npm run dev
 
-# Linting
-npm run lint
-
-# Formatação
-npm run format
+# Ou simplesmente abrir index.html no navegador
+# Para servir localmente com Live Server ou similar
 ```
 
-### Produção
+### 🌐 Deploy no GitHub Pages
+
+Este projeto está configurado para deploy automático no GitHub Pages!
+
+#### Configuração Automática
+1. **Push para main**: O deploy acontece automaticamente a cada push na branch `main`
+2. **GitHub Actions**: Workflow configurado em `.github/workflows/deploy.yml`
+3. **Acesso**: Site disponível em `https://AugustoArand.github.io/portifolio-augusto`
+
+#### Configuração Manual (se necessário)
+1. Vá em **Settings** > **Pages** no seu repositório
+2. Em **Source**, selecione **GitHub Actions**
+3. O workflow será executado automaticamente
+
+#### Estrutura para GitHub Pages
+```bash
+# Arquivos essenciais que devem estar no repositório:
+✅ index.html              # Página principal na raiz
+✅ assets/                 # Imagens e recursos
+✅ css/                    # Estilos
+✅ js/                     # JavaScript
+✅ .nojekyll               # Desabilita Jekyll
+✅ .github/workflows/      # Actions para deploy automático
+```
+
+### Produção (Build Local)
 
 ```bash
-# Build para produção
+# Build para produção (se usar build process)
 npm run build
 
 # Preview do build
 npm run preview
 
-# Servir localmente
+# Servir arquivos estáticos
 npm run serve
 ```
 
 ### Backend (Opcional)
 
 ```bash
-# Servidor Express
+# Servidor Express para formulário de contato
 npm start
 
 # Desenvolvimento com nodemon
@@ -206,6 +232,64 @@ portifolio-augusto/
 - **CSS Purging** para remoção de CSS não utilizado
 - **Image Optimization** para carregamento rápido
 - **Gzip Compression** para assets menores
+
+## 🌐 Troubleshooting GitHub Pages
+
+### Problemas Comuns
+
+**1. Site não carrega após deploy**
+```bash
+# Verificar se os arquivos estão na branch correta
+git checkout main
+git push origin main
+
+# Verificar se o workflow executou
+# Ir em Actions > Deploy to GitHub Pages
+```
+
+**2. Arquivos CSS/JS não carregam**
+```bash
+# Verificar caminhos relativos no HTML
+# Usar ./ em vez de / para caminhos relativos
+# Exemplo: ./css/main.css em vez de /css/main.css
+```
+
+**3. Imagens não aparecem**
+```bash
+# Verificar se as imagens estão commitadas
+git add assets/img/
+git commit -m "Add images"
+git push
+
+# Verificar caminhos das imagens no código
+```
+
+**4. JavaScript modules não funcionam**
+```bash
+# Certificar-se de que o servidor suporta MIME types corretos
+# O arquivo .nojekyll está presente para GitHub Pages
+```
+
+### Logs de Debug
+```bash
+# Ver logs do GitHub Actions
+1. Ir na aba "Actions" do repositório
+2. Clicar no workflow "Deploy to GitHub Pages"
+3. Verificar logs de erro
+
+# Debug local
+1. Abrir DevTools (F12)
+2. Verificar console para erros
+3. Verificar Network tab para recursos não carregados
+```
+
+### Checklist de Deploy
+- [ ] `index.html` está na raiz do repositório
+- [ ] Todos os assets estão commitados (CSS, JS, imagens)
+- [ ] Caminhos são relativos (começam com `./`)
+- [ ] Arquivo `.nojekyll` está presente
+- [ ] GitHub Actions tem permissões de Pages
+- [ ] Branch `main` está atualizada
 
 ## 📈 Performance
 
