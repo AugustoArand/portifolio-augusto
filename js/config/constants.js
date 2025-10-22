@@ -106,10 +106,10 @@ export const PROJECTS_DATA = [
     url: 'https://augustoarand.github.io'
   },
   {
-    title: 'Página Divulgação - Evento',
-    description: 'Front end Desenvolvido em Bootstrap',
-    image: './assets/img/riot-games-convention.PNG',
-    url: 'https://augustoarand.github.io/project-riot-games-convention/'
+    title: 'Sistema de Regularização de Veículos',
+    description: 'Projeto Desenvolvido em Node.js e Express',
+    image: './assets/img/gerenciador-veiculos.PNG',
+    url: 'https://augustoarand.github.io/gestao-regularidade-veiculos/'
   },
   {
     title: 'Site Airbnb- Demo',
