@@ -1,154 +1,201 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <!-- CSS modular customizado -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
     <title>Portfólio | Currículo - Augusto Santos</title>
-    
+
     <!-- Meta tags para SEO e acessibilidade -->
-    <meta name="description" content="Portfólio de Augusto Santos - Estudante de Análise e Desenvolvimento de Sistemas, QA e desenvolvedor em formação.">
-    <meta name="keywords" content="desenvolvedor, QA, portfolio, JavaScript, Node.js, React, testes automatizados">
-    <meta name="author" content="Augusto Santos">
-    
+    <meta
+      name="description"
+      content="Portfólio de Augusto Santos - Estudante de Análise e Desenvolvimento de Sistemas, QA e desenvolvedor em formação."
+    />
+    <meta name="keywords" content="desenvolvedor, QA, portfolio, JavaScript, Node.js, React, testes automatizados" />
+    <meta name="author" content="Augusto Santos" />
+
     <!-- Preconnect para melhor performance -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/img/logo-as-miniatura.svg">
-</head>
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-as-miniatura.svg" />
+  </head>
 
-<body class="font-monospace">
-
+  <body class="font-monospace">
     <!-- Inicio Barra de Navegação -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" role="navigation" aria-label="Navegação principal">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" aria-label="Voltar ao início">
-                <img src="assets/img/logo-as-miniatura.svg" width="30" height="30" alt="Logo Augusto Santos">
-            </a>
-            <a class="navbar-brand" href="#">Portfólio | Currículo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação"
-                title="Abrir menu de navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav
+      class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark"
+      role="navigation"
+      aria-label="Navegação principal"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" aria-label="Voltar ao início">
+          <img src="assets/img/logo-as-miniatura.svg" width="30" height="30" alt="Logo Augusto Santos" />
+        </a>
+        <a class="navbar-brand" href="#">Portfólio | Currículo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+          title="Abrir menu de navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre-mim" aria-label="Ir para seção Sobre Mim">Sobre Mim</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projetos" aria-label="Ir para seção Projetos">Projetos</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Mais
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#stacks-conhecidas">Stacks Conhecidas</a>
-                            <a class="dropdown-item" href="blog.html">Artigos Escritos</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre-mim" aria-label="Ir para seção Sobre Mim">Sobre Mim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projetos" aria-label="Ir para seção Projetos">Projetos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Mais
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#stacks-conhecidas">Stacks Conhecidas</a>
+                <a class="dropdown-item" href="blog.html">Artigos Escritos</a>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <!-- Fim da Barra de Navegação -->
 
     <!-- Card Sobre Mim -->
     <div class="container mt-5" id="sobre-mim">
-        <div class="row justify-content-center p-4">
-            <div class="col-12 col-md-6 col-lg-4 mb-2">
-                <!-- Card da Esquerda -->
-                <div class="card h-100 profile-card animate-on-scroll slide-in-left">
-                    <img class="card-img-top profile-img" src="assets/img/profile-pic-resized.JPG" alt="Foto de Augusto Santos">
-                    <div class="card-body">
-                        <h5 class="card-title">Augusto Arandiba</h5>
-                        <p class="card-text">Estudante de Análise e Desenvolvimento de Sistemas</p>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/augusto-arandiba-b26b90105/"
-                                class="badge bg-primary text-light text-decoration-none"
-                                target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                            <a href="https://github.com/AugustoArand"
-                                class="badge bg-dark text-light text-decoration-none"
-                                target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="row justify-content-center p-4">
+        <div class="col-12 col-md-6 col-lg-4 mb-2">
+          <!-- Card da Esquerda -->
+          <div class="card h-100 profile-card animate-on-scroll slide-in-left">
+            <img
+              class="card-img-top profile-img"
+              src="assets/img/profile-pic-resized.JPG"
+              alt="Foto de Augusto Santos"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Augusto Santos</h5>
+              <p class="card-text">Estudante de Análise e Desenvolvimento de Sistemas</p>
+              <div class="social-links">
+                <a
+                  href="https://www.linkedin.com/in/augusto-arandiba-b26b90105/"
+                  class="badge bg-primary text-light text-decoration-none"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+                <a
+                  href="https://github.com/AugustoArand"
+                  class="badge bg-dark text-light text-decoration-none"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-8 mb-2">
-                <!-- Card da Direita (Sobre Mim) -->
-                <div class="card h-80 mb-3 about-card animate-on-scroll slide-in-right">
-                    <div class="card-body">
-                        <h5 class="card-title">Sobre Mim</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Resumo Profissional</h6>
-                        <p class="card-text">Apaixonado por motos e tecnologia, atualmente cursando Análise e
-                            Desenvolvimento de Sistemas no Centro Universitário Jorge Amado e atuando como Estagiário QA
-                            no Instituto Reconcavo de Tecnologia. Possuo experiência na execução de testes manuais, automatizados, funcionais e não funcionais,
-                            testes de regressão e confirmação. Experiênia na gestão e reporte de bugs utilizando Ferramentas
-                            como Jira e Azure DevOps. Experiênia com testes automatizados utilizando Cypress, RobotFramework,
-                            Appium e Selenium. Experiência em programação full-stack com: JavaScript, Node.js, Express, React, Next.js, Prisma ORM.
-                            Experiênia em gestão e consulta de banco de dados relacionais (PostgreSQL, MySQL).
-    
-                        </p>
-                        <a href="#stacks-conhecidas" class="card-link"> ☛ Stack Conhecidas </a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-12 col-md-6 col-lg-8 mb-2">
+          <!-- Card da Direita (Sobre Mim) -->
+          <div class="card h-80 mb-3 about-card animate-on-scroll slide-in-right">
+            <div class="card-body">
+              <h5 class="card-title">Sobre Mim</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Resumo Profissional</h6>
+              <p class="card-text">
+                Apaixonado por motos e tecnologia, atualmente cursando Análise e Desenvolvimento de Sistemas no Centro
+                Universitário Jorge Amado e atuando como Estagiário QA no Instituto Reconcavo de Tecnologia. Possuo
+                experiência na execução de testes manuais, automatizados, funcionais e não funcionais, testes de
+                regressão e confirmação. Experiênia na gestão e reporte de bugs utilizando Ferramentas como Jira e Azure
+                DevOps. Experiênia com testes automatizados utilizando Cypress, RobotFramework, Appium e Selenium.
+                Experiência em programação full-stack com: JavaScript, Node.js, Express, React, Next.js, Prisma ORM.
+                Experiênia em gestão e consulta de banco de dados relacionais (PostgreSQL, MySQL).
+              </p>
+              <a href="#stacks-conhecidas" class="card-link"> ☛ Stack Conhecidas </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Fim Card Sobre Mim -->
 
-        <!-- Inicio Carrousel Projeto -->
-        <div class="container my-1" id="projetos">
-            <h2 class="text-center mb-3 animate-on-scroll fade-in">Projetos</h2>
-            <div class="col-12 col-md-8 mb-3 mx-auto">
-                <div id="carouselExampleCaptions" class="carousel slide animate-on-scroll scale-in" 
-                     data-bs-ride="carousel" aria-label="Carousel de projetos">
-                    <!-- Os slides serão gerados dinamicamente pelo JavaScript -->
-                    <div class="carousel-indicators">
-                        <!-- Indicadores serão gerados dinamicamente -->
-                    </div>
-                    <div class="carousel-inner">
-                        <!-- Items serão gerados dinamicamente pelo módulo carousel -->
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev" aria-label="Projeto anterior" title="Ver projeto anterior">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next" aria-label="Próximo projeto" title="Ver próximo projeto">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Próximo</span>
-                    </button>
-                </div>
-            </div>
+    <!-- Inicio Carrousel Projeto -->
+    <div class="container my-1" id="projetos">
+      <h2 class="text-center mb-3 animate-on-scroll fade-in">Projetos</h2>
+      <div class="col-12 col-md-8 mb-3 mx-auto">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide animate-on-scroll scale-in"
+          data-bs-ride="carousel"
+          aria-label="Carousel de projetos"
+        >
+          <!-- Os slides serão gerados dinamicamente pelo JavaScript -->
+          <div class="carousel-indicators">
+            <!-- Indicadores serão gerados dinamicamente -->
+          </div>
+          <div class="carousel-inner">
+            <!-- Items serão gerados dinamicamente pelo módulo carousel -->
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+            aria-label="Projeto anterior"
+            title="Ver projeto anterior"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+            aria-label="Próximo projeto"
+            title="Ver próximo projeto"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
         </div>
-        <!-- Fim Carrousel Projeto -->
+      </div>
+    </div>
+    <!-- Fim Carrousel Projeto -->
 
-        <!-- Inicio de Stacks Conhecidas -->
-        <div class="container my-5" id="stacks-conhecidas">
-            <h2 class="text-center mb-4 animate-on-scroll fade-in">Stacks Conhecidas</h2>
-            <!-- Interface de busca será criada dinamicamente pelo JavaScript -->
-            <!-- g-4 garante espaçamento vertical e horizontal entre as colunas/linhas -->
-            <div class="row g-4 mt-2">
-                <!-- Cards serão renderizados dinamicamente pelo módulo Portfolio -->
-            </div>
-        </div>
-        <!-- Final de Stacks Conhecidas -->
+    <!-- Inicio de Stacks Conhecidas -->
+    <div class="container my-5" id="stacks-conhecidas">
+      <h2 class="text-center mb-4 animate-on-scroll fade-in">Stacks Conhecidas</h2>
+      <!-- Interface de busca será criada dinamicamente pelo JavaScript -->
+      <!-- g-4 garante espaçamento vertical e horizontal entre as colunas/linhas -->
+      <div class="row g-4 mt-2">
+        <!-- Cards serão renderizados dinamicamente pelo módulo Portfolio -->
+      </div>
+    </div>
+    <!-- Final de Stacks Conhecidas -->
 
-        <!-- Formulário de Contato -->
-        <!-- <div class="container my-5">
+    <!-- Formulário de Contato -->
+    <!-- <div class="container my-5">
             <h2 class="text-center mb-4">Formulário de Contato</h2>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 col-lg-6">
@@ -183,31 +230,35 @@
                 </div>
             </div>
         </div> -->
-        <!-- Fim Formulário de Contato -->
+    <!-- Fim Formulário de Contato -->
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        
-        <!-- JavaScript modular -->
-        <script type="module" src="js/main.js"></script>
-        
-        <!-- Fallback para browsers que não suportam módulos -->
-        <script nomodule>
-            console.warn('Este browser não suporta módulos ES6. Algumas funcionalidades podem não funcionar corretamente.');
-        </script>
-</body>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<footer class="bg-dark text-light py-4">
+    <!-- JavaScript modular -->
+    <script type="module" src="js/main.js"></script>
+
+    <!-- Fallback para browsers que não suportam módulos -->
+    <script nomodule>
+      console.warn('Este browser não suporta módulos ES6. Algumas funcionalidades podem não funcionar corretamente.');
+    </script>
+  </body>
+
+  <footer class="bg-dark text-light py-4">
     <div class="container text-center">
-        <p class="mb-1">&copy; 2025 Augusto Arand. Todos os direitos reservados.</p>
-        <p class="mb-0">
-            <a href="mailto:seuemail@email.com" class="text-light text-decoration-underline me-3">Contato</a>
-            <a href="https://www.linkedin.com/in/seulinkedin" target="_blank"
-                class="text-light text-decoration-underline me-3">LinkedIn</a>
-            <a href="https://github.com/AugustoArand" target="_blank"
-                class="text-light text-decoration-underline">GitHub</a>
-        </p>
+      <p class="mb-1">&copy; 2025 Augusto Santos. Todos os direitos reservados.</p>
+      <p class="mb-0">
+        <a href="mailto:seuemail@email.com" class="text-light text-decoration-underline me-3">Contato</a>
+        <a
+          href="https://www.linkedin.com/in/seulinkedin"
+          target="_blank"
+          class="text-light text-decoration-underline me-3"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/AugustoArand" target="_blank" class="text-light text-decoration-underline"
+          >GitHub</a
+        >
+      </p>
     </div>
-</footer>
-
+  </footer>
 </html>
