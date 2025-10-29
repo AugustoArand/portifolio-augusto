@@ -19,7 +19,7 @@ class PortfolioApp {
     this.modules = {};
     this.isInitialized = false;
     this.deviceInfo = getDeviceInfo();
-    
+
     // Bind dos métodos
     this.init = this.init.bind(this);
     this.handleResize = this.handleResize.bind(this);
@@ -32,30 +32,29 @@ class PortfolioApp {
   async init() {
     try {
       logger.info('🚀 Inicializando Portfolio App...');
-      
+
       // Aguardar DOM estar pronto
       await this.waitForDOM();
-      
+
       // Verificar compatibilidade do browser
       this.checkBrowserCompatibility();
-      
+
       // Aplicar configurações iniciais
       this.applyInitialConfig();
-      
+
       // Inicializar módulos
       await this.initializeModules();
-      
+
       // Configurar event listeners globais
       this.setupGlobalEventListeners();
-      
+
       // Marcar como inicializado
       this.isInitialized = true;
-      
+
       // Disparar evento de inicialização completa
       this.dispatchAppReadyEvent();
-      
+
       logger.info('✅ Portfolio App inicializado com sucesso!');
-      
     } catch (error) {
       logger.error('❌ Erro ao inicializar aplicação:', error);
       this.handleInitializationError(error);
@@ -67,7 +66,7 @@ class PortfolioApp {
    * @returns {Promise} Promise que resolve quando DOM está pronto
    */
   waitForDOM() {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', resolve);
       } else {
@@ -106,8 +105,7 @@ class PortfolioApp {
   applyInitialConfig() {
     // Aplicar classe no body baseada no dispositivo
     document.body.classList.add(
-      this.deviceInfo.isMobile ? 'is-mobile' : 
-      this.deviceInfo.isTablet ? 'is-tablet' : 'is-desktop'
+      this.deviceInfo.isMobile ? 'is-mobile' : this.deviceInfo.isTablet ? 'is-tablet' : 'is-desktop'
     );
 
     if (this.deviceInfo.isTouchDevice) {
@@ -126,13 +124,13 @@ class PortfolioApp {
    */
   setupViewport() {
     let viewport = document.querySelector('meta[name="viewport"]');
-    
+
     if (!viewport) {
       viewport = document.createElement('meta');
       viewport.name = 'viewport';
       document.head.appendChild(viewport);
     }
-    
+
     // Otimizar viewport para mobile
     if (this.deviceInfo.isMobile) {
       viewport.content = 'width=device-width, initial-scale=1, user-scalable=no';
@@ -181,7 +179,7 @@ class PortfolioApp {
    * @returns {Promise} Promise que resolve quando módulo está pronto
    */
   waitForModuleReady(moduleName) {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       // Para módulos simples, resolver imediatamente
       // Para módulos complexos, implementar verificação específica
       setTimeout(resolve, 100);
@@ -194,16 +192,16 @@ class PortfolioApp {
   setupGlobalEventListeners() {
     // Resize handler otimizado
     window.addEventListener('resize', this.handleResize, { passive: true });
-    
+
     // Visibility change handler
     document.addEventListener('visibilitychange', this.handleVisibilityChange);
-    
+
     // Error handler global
     window.addEventListener('error', this.handleGlobalError.bind(this));
-    
+
     // Unhandled promise rejection
     window.addEventListener('unhandledrejection', this.handleUnhandledRejection.bind(this));
-    
+
     // Performance monitoring
     if ('performance' in window) {
       this.setupPerformanceMonitoring();
@@ -219,7 +217,7 @@ class PortfolioApp {
   handleResize() {
     // Atualizar informações do dispositivo
     this.deviceInfo = getDeviceInfo();
-    
+
     // Notificar módulos sobre mudança de tamanho
     Object.values(this.modules).forEach(module => {
       if (typeof module.handleResize === 'function') {
@@ -228,9 +226,11 @@ class PortfolioApp {
     });
 
     // Disparar evento customizado
-    window.dispatchEvent(new CustomEvent('portfolioResize', {
-      detail: this.deviceInfo
-    }));
+    window.dispatchEvent(
+      new CustomEvent('portfolioResize', {
+        detail: this.deviceInfo
+      })
+    );
   }
 
   /**
@@ -238,7 +238,7 @@ class PortfolioApp {
    */
   handleVisibilityChange() {
     const isVisible = !document.hidden;
-    
+
     // Pausar/retomar animações conforme visibilidade
     Object.values(this.modules).forEach(module => {
       if (typeof module.handleVisibilityChange === 'function') {
@@ -327,7 +327,7 @@ class PortfolioApp {
         config: APP_CONFIG
       }
     });
-    
+
     document.dispatchEvent(event);
   }
 
@@ -354,7 +354,7 @@ class PortfolioApp {
       Tente recarregar a página.
       <button type="button" class="btn-close" onclick="this.parentElement.remove()"></button>
     `;
-    
+
     document.body.insertAdjacentElement('afterbegin', errorContainer);
   }
 
@@ -401,7 +401,7 @@ class PortfolioApp {
 
     this.modules = {};
     this.isInitialized = false;
-    
+
     logger.info('🧹 Aplicação destruída');
   }
 }

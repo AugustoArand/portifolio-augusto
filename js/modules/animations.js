@@ -10,7 +10,7 @@ class Animations {
     this.observedElements = new Set();
     this.intersectionObserver = null;
     this.animationQueue = [];
-    
+
     this.init();
   }
 
@@ -31,7 +31,7 @@ class Animations {
       threshold: [0.1, 0.25, 0.5, 0.75, 1]
     };
 
-    this.intersectionObserver = new IntersectionObserver((entries) => {
+    this.intersectionObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           this.animateElement(entry.target);
@@ -83,11 +83,11 @@ class Animations {
     elements.forEach((element, index) => {
       // Adicionar classe de animação inicial
       element.classList.add('animate-on-scroll', animationType);
-      
+
       // Adicionar delay escalonado
       const delay = index * 100;
       element.style.setProperty('--animation-delay', `${delay}ms`);
-      
+
       // Observar elemento
       this.intersectionObserver.observe(element);
       this.observedElements.add(element);
@@ -101,10 +101,10 @@ class Animations {
   animateElement(element) {
     // Remover classe de estado inicial
     element.classList.remove('animate-on-scroll');
-    
+
     // Adicionar classe de animação ativa
     element.classList.add(APP_CONFIG.CSS_CLASSES.VISIBLE);
-    
+
     // Disparar evento personalizado
     const event = new CustomEvent('elementAnimated', {
       detail: { element }
@@ -118,14 +118,14 @@ class Animations {
   setupHoverEffects() {
     // Cards com efeito hover
     const cards = document.querySelectorAll(DOM_SELECTORS.CARDS);
-    
+
     cards.forEach(card => {
       this.addHoverEffect(card);
     });
 
     // Links externos com efeito hover
     const externalLinks = document.querySelectorAll(DOM_SELECTORS.EXTERNAL_LINKS);
-    
+
     externalLinks.forEach(link => {
       this.addLinkHoverEffect(link);
     });
@@ -199,7 +199,7 @@ class Animations {
     document.addEventListener('DOMContentLoaded', () => {
       document.body.style.opacity = '0';
       document.body.style.transition = 'opacity 0.5s ease';
-      
+
       setTimeout(() => {
         document.body.style.opacity = '1';
       }, 100);
@@ -232,7 +232,7 @@ class Animations {
    */
   observeNewElements(elements) {
     const elementList = elements instanceof NodeList ? Array.from(elements) : [elements];
-    
+
     elementList.forEach(element => {
       if (element && !this.observedElements.has(element)) {
         this.intersectionObserver.observe(element);
@@ -247,7 +247,7 @@ class Animations {
    */
   unobserveElements(elements) {
     const elementList = elements instanceof NodeList ? Array.from(elements) : [elements];
-    
+
     elementList.forEach(element => {
       if (element && this.observedElements.has(element)) {
         this.intersectionObserver.unobserve(element);
@@ -261,20 +261,20 @@ class Animations {
    */
   setupParallax() {
     const parallaxElements = document.querySelectorAll('.parallax');
-    
+
     if (parallaxElements.length === 0) return;
 
     let ticking = false;
 
     const updateParallax = () => {
       const scrollTop = window.pageYOffset;
-      
+
       parallaxElements.forEach(element => {
         const speed = element.dataset.speed || 0.5;
         const yPos = -(scrollTop * speed);
         element.style.transform = `translateY(${yPos}px)`;
       });
-      
+
       ticking = false;
     };
 
@@ -299,14 +299,14 @@ class Animations {
     const startTimestamp = performance.now();
     const difference = end - start;
 
-    const step = (timestamp) => {
+    const step = timestamp => {
       const elapsed = timestamp - startTimestamp;
       const progress = Math.min(elapsed / duration, 1);
-      
+
       // Easing function (ease-out)
       const easeOut = 1 - Math.pow(1 - progress, 3);
-      
-      const current = Math.floor(start + (difference * easeOut));
+
+      const current = Math.floor(start + difference * easeOut);
       element.textContent = current;
 
       if (progress < 1) {
@@ -347,7 +347,7 @@ class Animations {
     if (this.intersectionObserver) {
       this.intersectionObserver.disconnect();
     }
-    
+
     this.observedElements.clear();
     this.animationQueue = [];
   }
