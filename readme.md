@@ -12,18 +12,21 @@ Portfólio profissional completamente modularizado, seguindo as melhores prátic
 ## 🚀 Tecnologias e Ferramentas
 
 ### Frontend
+
 - **JavaScript ES2022+** - Módulos nativos, classes modernas
 - **CSS3 Modular** - Componentes isolados e reutilizáveis
 - **HTML5 Semântico** - Estrutura acessível e SEO-friendly
 - **Bootstrap 5.3** - Framework CSS responsivo
 
 ### Build e Desenvolvimento
+
 - **Vite** - Build tool moderno e rápido
 - **ESLint** - Linting de código
 - **Prettier** - Formatação automática
 - **Terser** - Minificação otimizada
 
 ### Backend (Opcional)
+
 - **Node.js + Express** - Servidor para contato
 - **Nodemailer** - Envio de emails
 
@@ -55,6 +58,7 @@ Portfólio profissional completamente modularizado, seguindo as melhores prátic
 ## ✨ Funcionalidades
 
 ### 🎨 Interface e UX
+
 - ✅ Design responsivo e moderno
 - ✅ Animações suaves com scroll reveal
 - ✅ Tema adaptável (preparado para dark mode)
@@ -63,6 +67,7 @@ Portfólio profissional completamente modularizado, seguindo as melhores prátic
 - ✅ Loading states e feedback visual
 
 ### 🔧 Tecnicamente
+
 - ✅ Módulos ES6+ nativos
 - ✅ Sistema de componentes reutilizáveis
 - ✅ Lazy loading de imagens
@@ -71,6 +76,7 @@ Portfólio profissional completamente modularizado, seguindo as melhores prátic
 - ✅ SEO e acessibilidade
 
 ### 🎯 Funcionalidades Específicas
+
 - ✅ Busca e filtro de tecnologias
 - ✅ Modal de detalhes das stacks
 - ✅ Navegação por teclado
@@ -101,16 +107,19 @@ npm run dev
 Este projeto está configurado para deploy automático no GitHub Pages!
 
 #### Configuração Automática
+
 1. **Push para main**: O deploy acontece automaticamente a cada push na branch `main`
 2. **GitHub Actions**: Workflow configurado em `.github/workflows/deploy.yml`
 3. **Acesso**: Site disponível em `https://AugustoArand.github.io/portifolio-augusto`
 
 #### Configuração Manual (se necessário)
+
 1. Vá em **Settings** > **Pages** no seu repositório
 2. Em **Source**, selecione **GitHub Actions**
 3. O workflow será executado automaticamente
 
 #### Estrutura para GitHub Pages
+
 ```bash
 # Arquivos essenciais que devem estar no repositório:
 ✅ index.html              # Página principal na raiz
@@ -163,6 +172,7 @@ portifolio-augusto/
 ## 🎯 Melhorias Implementadas
 
 ### Antes (Monolítico)
+
 - ❌ Código JavaScript inline
 - ❌ CSS não organizado
 - ❌ Funcionalidades acopladas
@@ -170,6 +180,7 @@ portifolio-augusto/
 - ❌ Performance limitada
 
 ### Depois (Modular)
+
 - ✅ Módulos ES6+ isolados
 - ✅ CSS componentizado
 - ✅ Separação de responsabilidades
@@ -183,14 +194,13 @@ portifolio-augusto/
 ## 🎨 Design System
 
 ### Cores
+
 ```css
---primary-color: #007bff
---secondary-color: #6c757d
---success-color: #28a745
---danger-color: #dc3545
+--primary-color: #007bff --secondary-color: #6c757d --success-color: #28a745 --danger-color: #dc3545;
 ```
 
 ### Animações
+
 - Fade in/out
 - Slide in (left, right, up, down)
 - Scale transitions
@@ -198,6 +208,7 @@ portifolio-augusto/
 - Loading states
 
 ### Componentes
+
 - Cards responsivos
 - Navegação adaptativa
 - Carousel interativo
@@ -222,12 +233,14 @@ portifolio-augusto/
 ## 🔧 Configurações de Build
 
 ### Vite
+
 - **Hot Module Replacement** para desenvolvimento rápido
 - **Code Splitting** automático
 - **Tree Shaking** para bundles menores
 - **Legacy Support** para browsers antigos
 
 ### Otimizações
+
 - **Terser** para minificação JavaScript
 - **CSS Purging** para remoção de CSS não utilizado
 - **Image Optimization** para carregamento rápido
@@ -238,6 +251,7 @@ portifolio-augusto/
 ### Problemas Comuns
 
 **1. Site não carrega após deploy**
+
 ```bash
 # Verificar se os arquivos estão na branch correta
 git checkout main
@@ -248,6 +262,7 @@ git push origin main
 ```
 
 **2. Arquivos CSS/JS não carregam**
+
 ```bash
 # Verificar caminhos relativos no HTML
 # Usar ./ em vez de / para caminhos relativos
@@ -255,6 +270,7 @@ git push origin main
 ```
 
 **3. Imagens não aparecem**
+
 ```bash
 # Verificar se as imagens estão commitadas
 git add assets/img/
@@ -265,12 +281,14 @@ git push
 ```
 
 **4. JavaScript modules não funcionam**
+
 ```bash
 # Certificar-se de que o servidor suporta MIME types corretos
 # O arquivo .nojekyll está presente para GitHub Pages
 ```
 
 ### Logs de Debug
+
 ```bash
 # Ver logs do GitHub Actions
 1. Ir na aba "Actions" do repositório
@@ -284,6 +302,7 @@ git push
 ```
 
 ### Checklist de Deploy
+
 - [ ] `index.html` está na raiz do repositório
 - [ ] Todos os assets estão commitados (CSS, JS, imagens)
 - [ ] Caminhos são relativos (começam com `./`)
@@ -294,12 +313,14 @@ git push
 ## 📈 Performance
 
 ### Métricas Alvo
+
 - **First Contentful Paint**: < 1.5s
 - **Largest Contentful Paint**: < 2.5s
 - **Cumulative Layout Shift**: < 0.1
 - **First Input Delay**: < 100ms
 
 ### Técnicas Utilizadas
+
 - Lazy loading de imagens
 - Code splitting por rota
 - Preload de recursos críticos
@@ -321,6 +342,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 👨‍💻 Autor
 
 **Augusto Santos**
+
 - LinkedIn: [Augusto Arandiba](https://www.linkedin.com/in/augusto-arandiba-b26b90105/)
 - GitHub: [@AugustoArand](https://github.com/AugustoArand)
 - Email: [contato](mailto:seuemail@email.com)

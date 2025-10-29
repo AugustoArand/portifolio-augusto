@@ -20,39 +20,41 @@
   --info-color: #17a2b8;
   --light-color: #f8f9fa;
   --dark-color: #343a40;
-  
+
   /* Cores de texto mais escuras */
   --text-primary: #1a1a1a;
   --text-secondary: #2d2d2d;
   --text-muted: #4a4a4a;
   --text-light: #666666;
-  
+
   /* Gradientes */
   --gradient-primary: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
   --gradient-secondary: linear-gradient(135deg, #6c757d 0%, #495057 100%);
   --gradient-success: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
-  
+
   /* Sombras */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
   --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.2);
-  
+
   /* Border radius */
   --border-radius-sm: 0.25rem;
   --border-radius-md: 0.5rem;
   --border-radius-lg: 1rem;
   --border-radius-xl: 1.5rem;
-  
+
   /* Transições */
   --transition-fast: 0.15s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.6s ease;
-  
+
   /* Tipografia */
   --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-family-monospace: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-  
+  --font-family-monospace:
+    'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New',
+    monospace;
+
   /* Z-index layers */
   --z-dropdown: 1000;
   --z-sticky: 1020;
@@ -91,19 +93,36 @@ body {
 }
 
 /* Tipografia aprimorada */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 1rem;
   color: var(--text-primary);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
 
 p {
   margin-bottom: 1rem;
@@ -183,7 +202,9 @@ section:nth-child(even) {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+  transition:
+    width 0.6s,
+    height 0.6s;
 }
 
 .btn-custom:hover::before {
@@ -253,7 +274,12 @@ footer::before {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
 }
 
 footer a {
@@ -305,8 +331,9 @@ footer a:hover {
 
 .border-gradient {
   border: 2px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-              var(--gradient-primary) border-box;
+  background:
+    linear-gradient(white, white) padding-box,
+    var(--gradient-primary) border-box;
 }
 
 /* Responsividade global */
@@ -314,23 +341,31 @@ footer a:hover {
   .container {
     padding: 15px;
   }
-  
-  h1 { font-size: 2.25rem; }
-  h2 { font-size: 1.875rem; }
-  
+
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.875rem;
+  }
+
   section {
     padding: 3rem 0;
   }
 }
 
 @media (max-width: 991.98px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+
   section {
     padding: 2.5rem 0;
   }
-  
+
   .btn-custom {
     padding: 0.6rem 1.5rem;
     font-size: 0.8rem;
@@ -341,29 +376,39 @@ footer a:hover {
   body {
     padding-top: 15px;
   }
-  
+
   .container {
     padding: 10px;
   }
-  
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
-  
+
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+
   section {
     padding: 2rem 0;
   }
 }
 
 @media (max-width: 575.98px) {
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.25rem; }
-  
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+
   .btn-custom {
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
   }
-  
+
   section {
     padding: 1.5rem 0;
   }
@@ -374,7 +419,7 @@ footer a:hover {
   .card:hover {
     transform: none;
   }
-  
+
   .btn-custom:hover {
     transform: none;
   }
@@ -387,12 +432,12 @@ footer a:hover {
     --dark-text: #ffffff;
     --dark-surface: #2d2d2d;
   }
-  
+
   body.dark-mode {
     background-color: var(--dark-bg);
     color: var(--dark-text);
   }
-  
+
   body.dark-mode .card {
     background: var(--dark-surface);
     color: var(--dark-text);
@@ -407,11 +452,11 @@ footer a:hover {
     --text-primary: #000000;
     --text-secondary: #1a1a1a;
   }
-  
+
   .card {
     border: 2px solid var(--dark-color);
   }
-  
+
   .text-gradient {
     -webkit-text-fill-color: currentColor;
     background: none;
@@ -440,7 +485,8 @@ footer a:hover {
 }
 
 /* Form elements with darker text */
-.form-control, .form-select {
+.form-control,
+.form-select {
   color: var(--text-primary);
 }
 
@@ -464,18 +510,18 @@ footer a:hover {
     background: white !important;
     color: black !important;
   }
-  
+
   .navbar,
   footer,
   .btn-custom {
     display: none !important;
   }
-  
+
   .card {
     box-shadow: none !important;
     border: 1px solid #ccc !important;
   }
-  
+
   section {
     padding: 1rem 0 !important;
   }

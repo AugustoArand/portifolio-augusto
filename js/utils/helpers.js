@@ -12,17 +12,17 @@
  */
 export function debounce(func, wait, immediate = false) {
   let timeout;
-  
+
   return function executedFunction(...args) {
     const later = () => {
       timeout = null;
       if (!immediate) func.apply(this, args);
     };
-    
+
     const callNow = immediate && !timeout;
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
-    
+
     if (callNow) func.apply(this, args);
   };
 }
@@ -35,12 +35,12 @@ export function debounce(func, wait, immediate = false) {
  */
 export function throttle(func, limit) {
   let inThrottle;
-  
-  return function(...args) {
+
+  return function (...args) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      setTimeout(() => (inThrottle = false), limit);
     }
   };
 }
@@ -53,23 +53,23 @@ export function throttle(func, limit) {
  */
 export function isElementInViewport(element, threshold = 0.1) {
   if (!element) return false;
-  
+
   const rect = element.getBoundingClientRect();
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
   const windowWidth = window.innerWidth || document.documentElement.clientWidth;
-  
+
   const verticalVisible = rect.top <= windowHeight && rect.bottom >= 0;
   const horizontalVisible = rect.left <= windowWidth && rect.right >= 0;
-  
+
   if (!verticalVisible || !horizontalVisible) return false;
-  
+
   // Calcular área visível
   const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
   const visibleWidth = Math.min(rect.right, windowWidth) - Math.max(rect.left, 0);
   const visibleArea = visibleHeight * visibleWidth;
   const totalArea = rect.width * rect.height;
-  
-  return (visibleArea / totalArea) >= threshold;
+
+  return visibleArea / totalArea >= threshold;
 }
 
 /**
@@ -80,30 +80,28 @@ export function isElementInViewport(element, threshold = 0.1) {
  */
 export function smoothScrollTo(target, offset = 0, duration = 800) {
   const element = typeof target === 'string' ? document.querySelector(target) : target;
-  
+
   if (!element) return;
-  
+
   const targetPosition = element.offsetTop - offset;
   const startPosition = window.pageYOffset;
   const distance = targetPosition - startPosition;
   const startTime = performance.now();
-  
+
   function animation(currentTime) {
     const timeElapsed = currentTime - startTime;
     const progress = Math.min(timeElapsed / duration, 1);
-    
+
     // Easing function (ease-in-out)
-    const ease = progress < 0.5 
-      ? 2 * progress * progress 
-      : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-    
+    const ease = progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
     window.scrollTo(0, startPosition + distance * ease);
-    
+
     if (progress < 1) {
       requestAnimationFrame(animation);
     }
   }
-  
+
   requestAnimationFrame(animation);
 }
 
@@ -116,7 +114,7 @@ export function getDeviceInfo() {
   const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
   const isTablet = /ipad|android(?!.*mobile)/i.test(userAgent);
   const isDesktop = !isMobile && !isTablet;
-  
+
   return {
     isMobile,
     isTablet,
@@ -165,16 +163,16 @@ export function loadScript(src, options = {}) {
     script.src = src;
     script.async = options.async !== false;
     script.defer = options.defer || false;
-    
+
     script.onload = () => resolve(script);
     script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
-    
+
     if (options.attributes) {
       Object.entries(options.attributes).forEach(([key, value]) => {
         script.setAttribute(key, value);
       });
     }
-    
+
     document.head.appendChild(script);
   });
 }
@@ -190,14 +188,14 @@ export function loadCSS(href, options = {}) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = href;
-    
+
     link.onload = () => resolve(link);
     link.onerror = () => reject(new Error(`Failed to load CSS: ${href}`));
-    
+
     if (options.media) {
       link.media = options.media;
     }
-    
+
     document.head.appendChild(link);
   });
 }
@@ -222,7 +220,7 @@ export async function copyToClipboard(text) {
       document.body.appendChild(textArea);
       textArea.focus();
       textArea.select();
-      
+
       const successful = document.execCommand('copy');
       document.body.removeChild(textArea);
       return successful;
@@ -251,12 +249,12 @@ export function getPreferredTheme() {
  */
 export function watchThemeChanges(callback) {
   if (!window.matchMedia) return () => {};
-  
+
   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  const handleChange = (e) => callback(e.matches ? 'dark' : 'light');
-  
+  const handleChange = e => callback(e.matches ? 'dark' : 'light');
+
   mediaQuery.addEventListener('change', handleChange);
-  
+
   // Retorna função para cleanup
   return () => mediaQuery.removeEventListener('change', handleChange);
 }
@@ -279,14 +277,14 @@ export function isValidEmail(email) {
  */
 export function formatDate(date, options = {}) {
   const dateObj = date instanceof Date ? date : new Date(date);
-  
+
   const defaultOptions = {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
     ...options
   };
-  
+
   return dateObj.toLocaleDateString('pt-BR', defaultOptions);
 }
 
@@ -299,15 +297,15 @@ export const logger = {
       console.debug('[DEBUG]', ...args);
     }
   },
-  
+
   info: (...args) => {
     console.info('[INFO]', ...args);
   },
-  
+
   warn: (...args) => {
     console.warn('[WARN]', ...args);
   },
-  
+
   error: (...args) => {
     console.error('[ERROR]', ...args);
   }

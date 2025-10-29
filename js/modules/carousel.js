@@ -14,13 +14,13 @@ class Carousel {
     this.intervalId = null;
     this.touchStartX = 0;
     this.touchEndX = 0;
-    
+
     this.init();
   }
 
   init() {
     if (!this.carousel) return;
-    
+
     this.setupCarouselData();
     this.setupControls();
     this.setupKeyboardNavigation();
@@ -35,7 +35,7 @@ class Carousel {
   setupCarouselData() {
     const carouselInner = this.carousel.querySelector('.carousel-inner');
     const carouselIndicators = this.carousel.querySelector('.carousel-indicators');
-    
+
     if (!carouselInner || !carouselIndicators) return;
 
     // Limpar conteúdo existente
@@ -77,14 +77,18 @@ class Carousel {
       <div class="carousel-caption d-none d-md-block">
         <h5 class="fw-bold text-dark">${project.title}</h5>
         <p class="text-dark">${project.description}</p>
-        ${project.url !== '#' ? `
+        ${
+          project.url !== '#'
+            ? `
           <a href="${project.url}" 
              target="_blank" 
              rel="noopener noreferrer"
              class="btn btn-sm btn-outline-dark mt-2">
             Ver Projeto
           </a>
-        ` : ''}
+        `
+            : ''
+        }
       </div>
     `;
 
@@ -102,7 +106,7 @@ class Carousel {
     indicator.setAttribute('data-bs-target', '#carouselExampleCaptions');
     indicator.setAttribute('data-bs-slide-to', index);
     indicator.setAttribute('aria-label', `Slide ${index + 1}`);
-    
+
     if (index === 0) {
       indicator.className = 'active';
       indicator.setAttribute('aria-current', 'true');
@@ -118,12 +122,12 @@ class Carousel {
     const prevButton = this.carousel?.querySelector('.carousel-control-prev');
     const nextButton = this.carousel?.querySelector('.carousel-control-next');
 
-    prevButton?.addEventListener('click', (e) => {
+    prevButton?.addEventListener('click', e => {
       e.preventDefault();
       this.previousSlide();
     });
 
-    nextButton?.addEventListener('click', (e) => {
+    nextButton?.addEventListener('click', e => {
       e.preventDefault();
       this.nextSlide();
     });
@@ -141,7 +145,7 @@ class Carousel {
    * Navegação por teclado
    */
   setupKeyboardNavigation() {
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       if (!this.isCarouselInView()) return;
 
       switch (e.key) {
@@ -169,14 +173,22 @@ class Carousel {
    * Navegação por toque (swipe)
    */
   setupTouchNavigation() {
-    this.carousel?.addEventListener('touchstart', (e) => {
-      this.touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
+    this.carousel?.addEventListener(
+      'touchstart',
+      e => {
+        this.touchStartX = e.changedTouches[0].screenX;
+      },
+      { passive: true }
+    );
 
-    this.carousel?.addEventListener('touchend', (e) => {
-      this.touchEndX = e.changedTouches[0].screenX;
-      this.handleSwipe();
-    }, { passive: true });
+    this.carousel?.addEventListener(
+      'touchend',
+      e => {
+        this.touchEndX = e.changedTouches[0].screenX;
+        this.handleSwipe();
+      },
+      { passive: true }
+    );
   }
 
   /**
@@ -194,7 +206,7 @@ class Carousel {
         // Swipe right - slide anterior
         this.previousSlide();
       }
-      
+
       this.pauseAutoPlay();
       this.resumeAutoPlayAfterDelay();
     }
@@ -261,13 +273,12 @@ class Carousel {
     if (this.carouselItems.length === 0) return;
 
     const current = this.carousel?.querySelector('.carousel-item.active');
-    const previous = current?.previousElementSibling || 
-                    this.carouselItems[this.carouselItems.length - 1];
+    const previous =
+      current?.previousElementSibling || this.carouselItems[this.carouselItems.length - 1];
 
     this.transitionToSlide(current, previous);
-    this.currentIndex = this.currentIndex === 0 ? 
-                       this.carouselItems.length - 1 : 
-                       this.currentIndex - 1;
+    this.currentIndex =
+      this.currentIndex === 0 ? this.carouselItems.length - 1 : this.currentIndex - 1;
     this.updateIndicators();
   }
 
@@ -312,7 +323,7 @@ class Carousel {
    */
   updateIndicators() {
     const indicators = this.carousel?.querySelectorAll('.carousel-indicators button');
-    
+
     indicators?.forEach((indicator, index) => {
       if (index === this.currentIndex) {
         indicator.classList.add('active');
@@ -378,7 +389,7 @@ class Carousel {
 
     const rect = this.carousel.getBoundingClientRect();
     const viewHeight = window.innerHeight || document.documentElement.clientHeight;
-    
+
     return rect.top < viewHeight && rect.bottom > 0;
   }
 

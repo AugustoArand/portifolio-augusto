@@ -8,14 +8,14 @@ export const APP_CONFIG = {
   APP_NAME: 'Portfólio | Currículo',
   AUTHOR: 'Augusto Santos',
   AUTHOR_FULL_NAME: 'Augusto Arand',
-  
+
   // URLs externas
   URLS: {
     LINKEDIN: 'https://www.linkedin.com/in/augusto-arandiba-b26b90105/',
     GITHUB: 'https://github.com/AugustoArand',
     EMAIL: 'augustoarandiba@email.com'
   },
-  
+
   // Configurações de animação
   ANIMATION: {
     SCROLL_OFFSET: 100,
@@ -23,14 +23,14 @@ export const APP_CONFIG = {
     FADE_IN_DURATION: 600,
     CAROUSEL_INTERVAL: 5000
   },
-  
+
   // Breakpoints responsivos
   BREAKPOINTS: {
     MOBILE: 768,
     TABLET: 992,
     DESKTOP: 1200
   },
-  
+
   // Classes CSS utilizadas
   CSS_CLASSES: {
     NAVBAR_SCROLLED: 'navbar-scrolled',
@@ -47,28 +47,28 @@ export const DOM_SELECTORS = {
   NAVBAR_TOGGLER: '.navbar-toggler',
   NAVBAR_COLLAPSE: '.navbar-collapse',
   NAV_LINKS: '.nav-link',
-  
+
   // Seções principais
   SECTIONS: {
     ABOUT: '#sobre-mim',
     PROJECTS: '#projetos',
     STACKS: '#stacks-conhecidas'
   },
-  
+
   // Carousel
   CAROUSEL: '#carouselExampleCaptions',
   CAROUSEL_ITEMS: '.carousel-item',
   CAROUSEL_CONTROLS: '.carousel-control-prev, .carousel-control-next',
-  
+
   // Cards
   CARDS: '.card',
   STACK_CARDS: '.stack-img',
   PROJECT_CARDS: '.project-img',
-  
+
   // Formulários
   CONTACT_FORM: '#contact-form',
   FORM_INPUTS: 'input, textarea',
-  
+
   // Elementos interativos
   BACK_BUTTON: '.back-btn',
   EXTERNAL_LINKS: 'a[target="_blank"]'
@@ -113,7 +113,8 @@ export const PROJECTS_DATA = [
   },
   {
     title: 'Site Airbnb- Demo',
-    description: 'Projeto desenvolvido em React + Next.js consumindo a API pública da própria Airbnb',
+    description:
+      'Projeto desenvolvido em React + Next.js consumindo a API pública da própria Airbnb',
     image: './assets/img/airbnb-demo.PNG',
     url: '#'
   }
@@ -167,7 +168,8 @@ export const STACKS_DATA = [
   },
   {
     title: 'Scrum Fundamentals | Gestão Ágil',
-    description: 'Conhecimento em metodologias ágeis de gestão de projetos, e base sólida referente ao CTFL Foundation (Não Certificado Ainda).',
+    description:
+      'Conhecimento em metodologias ágeis de gestão de projetos, e base sólida referente ao CTFL Foundation (Não Certificado Ainda).',
     image: './assets/img/scrumstudy.png'
   },
   {
@@ -177,7 +179,8 @@ export const STACKS_DATA = [
   },
   {
     title: 'Prisma ORM',
-    description: 'Conhecimento em mapeamento objeto-relacional e uso do Prisma para acesso a dados em aplicações Node.js.',
+    description:
+      'Conhecimento em mapeamento objeto-relacional e uso do Prisma para acesso a dados em aplicações Node.js.',
     image: './assets/img/prisma-orm.jpg'
   }
 ];

@@ -12,7 +12,7 @@ class Navigation {
     this.navbarCollapse = document.querySelector(DOM_SELECTORS.NAVBAR_COLLAPSE);
     this.navLinks = document.querySelectorAll(DOM_SELECTORS.NAV_LINKS);
     this.isScrolling = false;
-    
+
     this.init();
   }
 
@@ -31,13 +31,13 @@ class Navigation {
 
     const updateNavbar = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
+
       if (scrollTop > 50) {
         this.navbar?.classList.add(APP_CONFIG.CSS_CLASSES.NAVBAR_SCROLLED);
       } else {
         this.navbar?.classList.remove(APP_CONFIG.CSS_CLASSES.NAVBAR_SCROLLED);
       }
-      
+
       ticking = false;
     };
 
@@ -76,10 +76,10 @@ class Navigation {
     });
 
     // Fechar menu ao clicar fora
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', e => {
       const isClickInsideNav = this.navbar?.contains(e.target);
       const isNavOpen = this.navbarCollapse?.classList.contains('show');
-      
+
       if (!isClickInsideNav && isNavOpen) {
         if (window.bootstrap?.Collapse) {
           const bsCollapse = new bootstrap.Collapse(this.navbarCollapse, {
@@ -99,9 +99,9 @@ class Navigation {
   setupSmoothScrolling() {
     this.navLinks.forEach(link => {
       const href = link.getAttribute('href');
-      
+
       if (href && href.startsWith('#')) {
-        link.addEventListener('click', (e) => {
+        link.addEventListener('click', e => {
           e.preventDefault();
           this.scrollToSection(href);
         });
@@ -115,11 +115,11 @@ class Navigation {
    */
   scrollToSection(sectionId) {
     const targetSection = document.querySelector(sectionId);
-    
+
     if (!targetSection) return;
 
     this.isScrolling = true;
-    
+
     const navbarHeight = this.navbar?.offsetHeight || 0;
     const targetPosition = targetSection.offsetTop - navbarHeight - 20;
 
@@ -149,13 +149,13 @@ class Navigation {
       if (this.isScrolling) return;
 
       const scrollPos = window.scrollY + window.innerHeight / 2;
-      
+
       let activeSection = null;
-      
+
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionBottom = sectionTop + section.offsetHeight;
-        
+
         if (scrollPos >= sectionTop && scrollPos <= sectionBottom) {
           activeSection = section;
         }
@@ -164,7 +164,7 @@ class Navigation {
       // Atualizar links ativos
       this.navLinks.forEach(link => {
         link.classList.remove('active');
-        
+
         if (activeSection) {
           const linkHref = link.getAttribute('href');
           if (linkHref === `#${activeSection.id}`) {

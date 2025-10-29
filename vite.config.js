@@ -5,7 +5,7 @@ export default defineConfig({
   // Configurações base
   base: './',
   publicDir: 'assets',
-  
+
   // Configurações do servidor de desenvolvimento
   server: {
     port: 3000,
@@ -13,14 +13,14 @@ export default defineConfig({
     host: true,
     cors: true
   },
-  
+
   // Configurações do servidor de preview
   preview: {
     port: 3000,
     open: true,
     host: true
   },
-  
+
   // Configurações de build
   build: {
     outDir: 'dist',
@@ -28,7 +28,7 @@ export default defineConfig({
     sourcemap: true,
     minify: 'terser',
     target: 'es2015',
-    
+
     // Configurações de chunking para otimização
     rollupOptions: {
       input: {
@@ -41,7 +41,7 @@ export default defineConfig({
           utils: ['./js/utils/helpers.js'],
           modules: [
             './js/modules/navigation.js',
-            './js/modules/carousel.js', 
+            './js/modules/carousel.js',
             './js/modules/animations.js'
           ]
         },
@@ -50,7 +50,7 @@ export default defineConfig({
         assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
       }
     },
-    
+
     // Configurações de terser para minificação
     terserOptions: {
       compress: {
@@ -59,7 +59,7 @@ export default defineConfig({
       }
     }
   },
-  
+
   // Plugins
   plugins: [
     // Plugin para compatibilidade com browsers antigos
@@ -67,12 +67,12 @@ export default defineConfig({
       targets: ['defaults', 'not IE 11']
     })
   ],
-  
+
   // Configurações de otimização
   optimizeDeps: {
     include: ['bootstrap']
   },
-  
+
   // Configurações de CSS
   css: {
     devSourcemap: true,
@@ -82,10 +82,10 @@ export default defineConfig({
       }
     }
   },
-  
+
   // Configurações de assets
   assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif'],
-  
+
   // Define globais para compatibilidade
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
