@@ -17,7 +17,8 @@
 /* Diferentes tipos de animação de entrada */
 .fade-in {
   opacity: 0;
-  transition: opacity var(--animation-delay, 0ms) 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--animation-delay, 0ms) 0.6s
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in.visible {
@@ -94,7 +95,8 @@
 
 /* Loading animations */
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -126,7 +128,7 @@
   overflow: hidden;
   border-right: 2px solid;
   white-space: nowrap;
-  animation: 
+  animation:
     typing 3.5s steps(30, end),
     blink-caret 0.75s step-end infinite;
 }
@@ -141,7 +143,8 @@
 }
 
 @keyframes blink-caret {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {
@@ -151,7 +154,8 @@
 
 /* Floating animations */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -165,10 +169,15 @@
 
 /* Bounce animation */
 @keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
     transform: translate3d(0, 0, 0);
   }
-  40%, 43% {
+  40%,
+  43% {
     transform: translate3d(0, -15px, 0);
   }
   70% {
@@ -185,13 +194,21 @@
 
 /* Shake animation */
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
-  10%, 30%, 50%, 70%, 90% {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
     transform: translateX(-5px);
   }
-  20%, 40%, 60%, 80% {
+  20%,
+  40%,
+  60%,
+  80% {
     transform: translateX(5px);
   }
 }
@@ -284,12 +301,24 @@
 }
 
 /* Stagger animation delays */
-.stagger-1 { animation-delay: 100ms; }
-.stagger-2 { animation-delay: 200ms; }
-.stagger-3 { animation-delay: 300ms; }
-.stagger-4 { animation-delay: 400ms; }
-.stagger-5 { animation-delay: 500ms; }
-.stagger-6 { animation-delay: 600ms; }
+.stagger-1 {
+  animation-delay: 100ms;
+}
+.stagger-2 {
+  animation-delay: 200ms;
+}
+.stagger-3 {
+  animation-delay: 300ms;
+}
+.stagger-4 {
+  animation-delay: 400ms;
+}
+.stagger-5 {
+  animation-delay: 500ms;
+}
+.stagger-6 {
+  animation-delay: 600ms;
+}
 
 /* Page transition */
 .page-transition {
@@ -333,7 +362,7 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  
+
   .animate-on-scroll,
   .fade-in,
   .slide-in-left,
@@ -346,7 +375,7 @@
     opacity: 1;
     transform: none;
   }
-  
+
   .typewriter {
     border-right: none;
     animation: none;
@@ -363,7 +392,7 @@
     animation: none !important;
     transition: none !important;
   }
-  
+
   .animate-on-scroll,
   .fade-in,
   .slide-in-left,
@@ -382,12 +411,12 @@
   .glow {
     box-shadow: 0 0 0 2px currentColor;
   }
-  
+
   .gradient-animation {
     background: currentColor;
     animation: none;
   }
-  
+
   .skeleton {
     background: repeating-linear-gradient(
       90deg,

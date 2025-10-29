@@ -14,7 +14,7 @@ class Portfolio {
       activeFilter: 'all',
       searchQuery: ''
     };
-    
+
     // Aguardar DOM estar pronto antes de inicializar
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => this.initializeContainers());
@@ -29,7 +29,7 @@ class Portfolio {
   initializeContainers() {
     this.projectsContainer = document.querySelector('#projetos .row');
     this.stacksContainer = document.querySelector('#stacks-conhecidas .row');
-    
+
     this.init();
   }
 
@@ -56,7 +56,7 @@ class Portfolio {
       const stackCard = this.createStackCard(stack, index);
       this.stacksContainer.appendChild(stackCard);
     });
-    
+
     // Integrar com o sistema de animações existente
     this.initializeStackAnimations();
   }
@@ -66,10 +66,10 @@ class Portfolio {
    */
   initializeStackAnimations() {
     const stackCards = this.stacksContainer.querySelectorAll('.animate-on-scroll');
-    
+
     // Tentar usar o módulo de animações existente
     const animationsModule = window.portfolioApp?.getModule('animations');
-    
+
     if (animationsModule && typeof animationsModule.observeNewElements === 'function') {
       // Se o módulo de animações está disponível e tem o método, usar o observer existente
       animationsModule.observeNewElements(stackCards);
@@ -119,7 +119,7 @@ class Portfolio {
         </div>
       </div>
     `;
-    
+
     colDiv.innerHTML = cardHTML;
     return colDiv;
   }
@@ -131,13 +131,13 @@ class Portfolio {
    */
   getStackCategory(title) {
     const categories = {
-      'Frontend': ['React', 'HTML', 'CSS', 'JavaScript'],
-      'Backend': ['Node.js', 'Express.js', 'Prisma'],
+      Frontend: ['React', 'HTML', 'CSS', 'JavaScript'],
+      Backend: ['Node.js', 'Express.js', 'Prisma'],
       'Banco de Dados': ['SQL', 'Postgres'],
-      'Automação': ['Cypress', 'Robot Framework', 'Jmeter'],
-      'Dados': ['Excel', 'PowerBI'],
-      'Ferramentas': ['Postman', 'Jira'],
-      'Metodologia': ['Scrum', 'Ágil']
+      Automação: ['Cypress', 'Robot Framework', 'Jmeter'],
+      Dados: ['Excel', 'PowerBI'],
+      Ferramentas: ['Postman', 'Jira'],
+      Metodologia: ['Scrum', 'Ágil']
     };
 
     for (const [category, keywords] of Object.entries(categories)) {
@@ -155,7 +155,7 @@ class Portfolio {
   setupSearch() {
     // Criar campo de busca se não existir
     let searchContainer = document.querySelector('.portfolio-search');
-    
+
     if (!searchContainer) {
       searchContainer = this.createSearchInterface();
       const stacksSection = document.querySelector('#stacks-conhecidas');
@@ -169,7 +169,7 @@ class Portfolio {
 
     const searchInput = searchContainer?.querySelector('#stack-search');
     if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
+      searchInput.addEventListener('input', e => {
         this.filterState.searchQuery = e.target.value.toLowerCase();
         this.applyFilters();
       });
@@ -183,7 +183,7 @@ class Portfolio {
   createSearchInterface() {
     const container = document.createElement('div');
     container.className = 'portfolio-search mb-4';
-    
+
     container.innerHTML = `
       <div class="row justify-content-center">
         <div class="col-md-6">
@@ -227,7 +227,7 @@ class Portfolio {
     const filterSelect = document.querySelector('#stack-filter');
     const clearButton = document.querySelector('#clear-search');
 
-    filterSelect?.addEventListener('change', (e) => {
+    filterSelect?.addEventListener('change', e => {
       this.filterState.activeFilter = e.target.value;
       this.applyFilters();
     });
@@ -256,13 +256,14 @@ class Portfolio {
       const category = card.querySelector('.badge').textContent;
 
       // Verificar busca por texto
-      const matchesSearch = this.filterState.searchQuery === '' ||
-                           title.includes(this.filterState.searchQuery) ||
-                           description.includes(this.filterState.searchQuery);
+      const matchesSearch =
+        this.filterState.searchQuery === '' ||
+        title.includes(this.filterState.searchQuery) ||
+        description.includes(this.filterState.searchQuery);
 
       // Verificar filtro por categoria
-      const matchesFilter = this.filterState.activeFilter === 'all' ||
-                           category === this.filterState.activeFilter;
+      const matchesFilter =
+        this.filterState.activeFilter === 'all' || category === this.filterState.activeFilter;
 
       const shouldShow = matchesSearch && matchesFilter;
 
@@ -306,7 +307,7 @@ class Portfolio {
    */
   setupCardInteractions() {
     // Delegação de eventos para cards dinâmicos
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', e => {
       const stackCard = e.target.closest('.stack-card');
       if (stackCard) {
         this.handleStackCardClick(stackCard, e);
@@ -341,7 +342,7 @@ class Portfolio {
   showStackDetails(title, description) {
     // Criar modal dinâmico se não existir
     let modal = document.querySelector('#stackModal');
-    
+
     if (!modal) {
       modal = this.createStackModal();
       document.body.appendChild(modal);

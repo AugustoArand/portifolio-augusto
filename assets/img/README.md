@@ -3,6 +3,7 @@
 Esta pasta contém todas as imagens utilizadas no portfólio:
 
 ## Imagens de Projetos
+
 - `pig-game.PNG` - Screenshot do jogo Pig Game
 - `guess-my-number.PNG` - Screenshot do jogo Guess My Number
 - `bank-app-new.PNG` - Screenshot do simulador bancário
@@ -12,6 +13,7 @@ Esta pasta contém todas as imagens utilizadas no portfólio:
 - `airbnb-demo.PNG` - Screenshot do clone do Airbnb
 
 ## Imagens de Tecnologias/Stacks
+
 - `JS.jpg` - Logo JavaScript/HTML/CSS
 - `node.png` - Logo Node.js/Express
 - `postgres.png` - Logo PostgreSQL
@@ -26,11 +28,13 @@ Esta pasta contém todas as imagens utilizadas no portfólio:
 - `prisma-orm.jpg` - Logo Prisma ORM
 
 ## Imagens de Perfil
+
 - `photo01.jpeg` - Foto de perfil para blog
 - `photo02.jpeg` - Foto de perfil principal
 - `logo-as-miniatura.svg` - Logo/favicon do portfólio
 
 ## Otimizações
+
 - Todas as imagens foram otimizadas para web
 - Lazy loading implementado
 - Fallback para imagens que falham ao carregar
