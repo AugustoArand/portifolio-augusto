@@ -1,0 +1,108 @@
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background-color: #f3f4f6;
+    color: #23272b;
+}
+
+.navbar {
+    background: #343a40 !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: #dee2e6 !important;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #6c757d;
+    box-shadow: 0 0 0 4px #fff, 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1rem;
+}
+
+.intro-section {
+    background: linear-gradient(120deg, #6c757d 60%, #adb5bd 100%);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2rem 1rem 2rem 1rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 24px rgba(52, 58, 64, 0.07);
+    text-align: center;
+}
+
+.card {
+    border: none;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.15s, box-shadow 0.15s;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 8px 32px rgba(108, 117, 125, 0.13);
+}
+
+.card-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #495057;
+}
+
+.btn-outline-primary {
+    border-radius: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 500;
+    border-color: #6c757d;
+    color: #6c757d;
+    background: transparent;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background: #6c757d;
+    color: #fff;
+    border-color: #6c757d;
+}
+
+.project-author {
+    font-size: 0.98rem;
+}
+
+.back-btn {
+    border-radius: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    background: #dee2e6;
+    color: #343a40;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.back-btn:hover,
+.back-btn:focus {
+    background: #6c757d;
+    color: #fff;
+}
+
+.footer-gray {
+    background: #343a40;
+    color: #dee2e6;
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+}

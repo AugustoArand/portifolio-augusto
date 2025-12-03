@@ -166,9 +166,9 @@ export const STACKS_DATA = [
     image: './assets/img/jmeter.png'
   },
   {
-    title: 'Scrum Fundamentals | Gestão Ágil',
-    description: 'Conhecimento em metodologias ágeis de gestão de projetos, e base sólida referente ao CTFL Foundation (Não Certificado Ainda).',
-    image: './assets/img/scrumstudy.png'
+    title: 'Certificações',
+    description: 'Certificado em CPRE-FL e Scrum Fundamentals. Base sólida no CTFL-FL e CTFL-AT (Sem Certificação).',
+    image: './assets/img/bsqtb.png'
   },
   {
     title: 'React | Next.js',
