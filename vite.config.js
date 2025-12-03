@@ -32,8 +32,7 @@ export default defineConfig({
     // Configurações de chunking para otimização
     rollupOptions: {
       input: {
-        main: 'index.html',
-        blog: 'blog.html'
+        main: 'index.html'
       },
       output: {
         manualChunks: {
