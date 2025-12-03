@@ -37,7 +37,6 @@ export default defineConfig({
       },
       output: {
         manualChunks: {
-          vendor: ['bootstrap'],
           utils: ['./js/utils/helpers.js'],
           modules: [
             './js/modules/navigation.js',
@@ -67,11 +66,6 @@ export default defineConfig({
       targets: ['defaults', 'not IE 11']
     })
   ],
-  
-  // Configurações de otimização
-  optimizeDeps: {
-    include: ['bootstrap']
-  },
   
   // Configurações de CSS
   css: {
