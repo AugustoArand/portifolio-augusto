@@ -346,8 +346,8 @@
   
   .portfolio-search .form-control,
   .portfolio-search .form-select {
-    background: rgba(52, 73, 94, 0.8);
-    color: #ecf0f1;
+    background: #ecf0f1;
+    color: #212529;
     border-color: rgba(255, 255, 255, 0.1);
   }
 }
