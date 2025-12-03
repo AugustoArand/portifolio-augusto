@@ -211,12 +211,24 @@
 
 /* About section card specific styles */
 .about-card {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .about-card .card-body {
   padding: 2rem;
+}
+
+.about-card .card-title {
+  color: #212529;
+}
+
+.about-card .card-subtitle {
+  color: #6c757d !important;
+}
+
+.about-card .card-text {
+  color: #495057;
 }
 
 /* Professional objective card */

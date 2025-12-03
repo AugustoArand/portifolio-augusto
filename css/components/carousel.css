@@ -56,12 +56,14 @@
   margin-bottom: 0.75rem;
   font-weight: 700;
   text-shadow: none;
+  color: #212529;
 }
 
 .carousel-caption p {
   margin-bottom: 1rem;
   text-shadow: none;
   line-height: 1.5;
+  color: #495057;
 }
 
 /* Carousel controls */
