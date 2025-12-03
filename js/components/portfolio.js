@@ -109,7 +109,7 @@ class Portfolio {
              class="card-img-top stack-img" 
              alt="${stack.title}"
              loading="lazy"
-             onerror="this.src='./assets/img/placeholder.png'">
+             onerror="console.error('Erro ao carregar imagem:', this.src); this.style.display='none';">
         <div class="card-body">
           <h5 class="card-title">${stack.title}</h5>
           <p class="card-text">${stack.description}</p>
@@ -373,14 +373,14 @@ class Portfolio {
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title"></h5>
+            <h5 class="modal-title" style="color: #212529;"></h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" 
                     aria-label="Fechar modal" title="Fechar"></button>
           </div>
           <div class="modal-body">
-            <p></p>
+            <p style="color: #495057;"></p>
             <div class="mt-3">
-              <small class="text-muted">
+              <small class="text-muted" style="color: #6c757d;">
                 Esta é uma das tecnologias que utilizo em meus projetos.
               </small>
             </div>

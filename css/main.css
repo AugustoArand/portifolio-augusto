@@ -217,10 +217,12 @@ section:nth-child(even) {
 
 .card-title {
   font-weight: 600;
+  color: #212529;
 }
 
 .card-text {
   line-height: 1.6;
+  color: #495057;
 }
 
 .card-subtitle {
