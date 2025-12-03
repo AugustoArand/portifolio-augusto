@@ -1,9 +1,9 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Executa quando há push na branch main
+  # Executa quando há push na branch modelo-portifolio-01
   push:
-    branches: [ main ]
+    branches: [ modelo-portifolio-01 ]
   
   # Permite execução manual
   workflow_dispatch:
@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies (se necessário)
         run: |
           if [ -f "package.json" ]; then
-            npm install
+            npm install --legacy-peer-deps
           else
             echo "Nenhuma dependência para instalar - site estático"
           fi
@@ -61,10 +61,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Ajuste o caminho conforme sua estrutura
-          # Se usa build: './dist'
-          # Se não usa build: '.'
-          path: '.'
+          # Usa o diretório dist gerado pelo Vite
+          path: './dist'
 
   # Job de deploy
   deploy:
