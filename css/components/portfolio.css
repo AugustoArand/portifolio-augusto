@@ -100,21 +100,29 @@
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  background: rgba(248, 249, 250, 0.8);
+  background: #ffffff;
+  color: #212529;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.portfolio-search .form-control::placeholder {
+  color: #6c757d;
+  opacity: 0.7;
 }
 
 .portfolio-search .form-control:focus {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
   background: #fff;
+  color: #212529;
+  outline: none;
 }
 
 .portfolio-search .btn {
   border: none;
   padding: 0.75rem 1rem;
-  background: rgba(108, 117, 125, 0.1);
-  color: #6c757d;
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
   transition: all 0.3s ease;
 }
 
@@ -127,7 +135,8 @@
   border: none;
   border-radius: 2rem;
   padding: 0.75rem 1.5rem;
-  background: rgba(248, 249, 250, 0.8);
+  background: #ffffff;
+  color: #212529;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -136,6 +145,13 @@
 .portfolio-search .form-select:focus {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
   background: #fff;
+  color: #212529;
+  outline: none;
+}
+
+.portfolio-search .form-select option {
+  color: #212529;
+  background: #ffffff;
 }
 
 /* No results message */
