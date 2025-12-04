@@ -19,6 +19,19 @@ class Animations {
     this.setupScrollReveal();
     this.setupHoverEffects();
     this.setupLoadingAnimations();
+    this.setupDynamicElementsListener();
+  }
+
+  /**
+   * Configura listener para novos elementos adicionados dinamicamente
+   */
+  setupDynamicElementsListener() {
+    document.addEventListener('newElementsAdded', (event) => {
+      const { elements } = event.detail;
+      if (elements && elements.length > 0) {
+        this.prepareElementsForAnimation(elements, 'fade-in');
+      }
+    });
   }
 
   /**

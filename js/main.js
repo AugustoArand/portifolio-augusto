@@ -8,6 +8,7 @@ import Navigation from './modules/navigation.js';
 import Carousel from './modules/carousel.js';
 import Animations from './modules/animations.js';
 import Portfolio from './components/portfolio.js';
+import { initArticles } from './modules/articles.js';
 import { APP_CONFIG } from './config/constants.js';
 import { logger, getDeviceInfo } from './utils/helpers.js';
 
@@ -160,7 +161,8 @@ class PortfolioApp {
       { name: 'animations', factory: () => new Animations() },
       { name: 'navigation', factory: () => new Navigation() },
       { name: 'carousel', factory: () => new Carousel() },
-      { name: 'portfolio', factory: () => new Portfolio() }
+      { name: 'portfolio', factory: () => new Portfolio() },
+      { name: 'articles', factory: () => initArticles() }
     ];
 
     for (const { name, factory } of moduleInitializers) {

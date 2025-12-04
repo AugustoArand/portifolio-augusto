@@ -8,6 +8,7 @@
 @import url('./components/navigation.css');
 @import url('./components/carousel.css');
 @import url('./components/portfolio.css');
+@import url('./components/articles.css');
 
 /* Reset e configurações base */
 :root {
